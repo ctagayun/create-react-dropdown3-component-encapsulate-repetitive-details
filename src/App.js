@@ -12,10 +12,12 @@ const App = () => {
 
   const handleMenuOne = () => {
     console.log('clicked one');
+    alert ('Clicked menu1');
   };
 
   const handleMenuTwo = () => {
     console.log('clicked two');
+    alert ('Clicked menu2');
   };
 
   return (
@@ -29,11 +31,6 @@ const App = () => {
   );
 };
 
-
-//Create a dropdown control - has two props
-//open - prop to signify open or close
-//trigger - prop is for dropdown to render the menu as list
-//menu - prop containing the "buttons" for menu1 and menu2
 
 //However there is still logic of the dropdown component 
 //sitting in its parent component App.js.
@@ -76,7 +73,6 @@ const Dropdown = ({ trigger, menu }) => {
                 },
               })}
             </li>
-
           ))}
         </ul>
       ) : null}

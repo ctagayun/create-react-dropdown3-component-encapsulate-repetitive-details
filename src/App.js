@@ -21,8 +21,11 @@ const App = () => {
   };
 
   return (
+     
     <Dropdown
+      //populate the "trigger" prop
       trigger={<button>Dropdown</button>}
+      //populate the "menu" prop
       menu={[
         <button onClick={handleMenuOne}>Menu 1</button>,
         <button onClick={handleMenuTwo}>Menu 2</button>,
@@ -40,7 +43,6 @@ const App = () => {
 
 //So the next step shows how to elegantly move all repetitive 
 //implementation details such as:
-//   open state
 //   const handleOpen = () => {
 //   const [open, setOpen] = React.useState(false);
 //into the dropdown component by using 
@@ -64,10 +66,14 @@ const Dropdown = ({ trigger, menu }) => {
       {open ? (
         <ul className="menu">
           {menu.map((menuItem, index) => (
-            <li key={index} className="menu-item">{menuItem}
+            <li key={index} className="menu-item">
+               {/* replicate the menuitem in every iteration */}
                {React.cloneElement(menuItem, {
                 onClick: () => {
-                  // Furthermore, the high-level API allows us to close the dropdown once a menu item in a dropdown is clicked while still preserving its native implementation (here: menuItem.props.onClick).
+                  // Furthermore, the high-level API allows us to 
+                  //close the dropdown once a menu item in a native
+                  //dropdown is clicked while still preserving its 
+                  //implementation (here: menuItem.props.onClick).
                   menuItem.props.onClick();
                   setOpen(false);
                 },

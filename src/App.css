@@ -76,3 +76,11 @@ CSS for the dropdown's menu, but feel free to use an alternative like Tailwind C
   font: inherit;
   cursor: pointer;
 }
+
+.menu > ul > li {
+  display:inline-block;
+
+    margin-left: 15px;       /* This is where the drop down box appears */
+
+    position: relative;
+}

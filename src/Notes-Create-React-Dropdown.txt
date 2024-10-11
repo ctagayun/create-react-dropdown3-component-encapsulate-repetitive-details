@@ -17,3 +17,15 @@ Introduction:
 
   2.  If React Project is created by create-react-app 
       include it in our app’s entry file in index.js :
+
+  3. Next go to https://www.robinwieruch.de/react-dropdown/ 
+  and do the tutorial. See comments in the source code.
+
+  4. Next after completing the dropdown tutorial, go to 
+  React Hook: Detect Click outside of Component and do the tutorial 
+    https://www.robinwieruch.de/react-hook-detect-click-outside-component/
+  on how to close a dropdown if clicked outside of the component.
+
+    But before doing tutorial on Detecting Click outside of component,
+  do the tutorial also in React: Event Bubbling and Capturing
+  https://www.robinwieruch.de/react-event-bubbling-capturing/

@@ -21,16 +21,27 @@ const App = () => {
   };
 
   return (
-     
-    <Dropdown
-      //populate the "trigger" prop
-      trigger={<button>Dropdown</button>}
-      //populate the "menu" prop
-      menu={[
-        <button onClick={handleMenuOne}>Menu 1</button>,
-        <button onClick={handleMenuTwo}>Menu 2</button>,
-      ]}
-    />
+     <> 
+      <div className="row mb-2">
+        <h5 className="themeFontColor text-center">
+          Dropdown Component
+        </h5>
+      </div>
+      <hr />
+       
+       <div>
+        <Dropdown  
+          //populate the "trigger" prop
+          trigger={<button>Show Dropdown</button>}
+         
+          //populate the "menu" prop
+          menu={[
+            <button onClick={handleMenuOne}>Menu 1</button>,
+            <button onClick={handleMenuTwo}>Menu 2</button>,
+          ]}
+        />
+        </div>
+    </>
   );
 };
 
@@ -57,6 +68,7 @@ const Dropdown = ({ trigger, menu }) => {
   };
 
   return (
+     
     <div className="dropdown">
        {React.cloneElement(trigger, {
         onClick: handleOpen,
@@ -83,6 +95,7 @@ const Dropdown = ({ trigger, menu }) => {
         </ul>
       ) : null}
     </div>
+     
   );
 };
 

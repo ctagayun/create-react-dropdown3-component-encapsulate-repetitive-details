@@ -50,13 +50,12 @@ CSS for the dropdown's menu, but feel free to use an alternative like Tailwind C
   margin: 5px 0;
   padding: 0;
 
-  border: 1px solid grey;
-  width: 150px;
+  border: 2px solid grey;
+  width: 250px;
 }
 
 .menu > li {
   margin: 0;
-
   background-color: white;
 }
 
